@@ -1,0 +1,30 @@
+name: Code Health Check
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  validate-markup:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Source
+        uses: actions/checkout@v4
+
+      - name: Run HTML Validator
+        uses: CybozuLab/html5validator-action@v2
+        with:
+          root: '.'
+          match: 'index.html'
+
+      - name: Basic JS Syntax Check
+        run: |
+          node -e "
+            const fs = require('fs');
+            const code = fs.readFileSync('script.js', 'utf8');
+            new Function(code);
+            console.log('script.js syntax valid.');
+          "
