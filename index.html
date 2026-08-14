@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Weather Radar</h1>
+            <div class="search-box">
+                <input type="text" id="city-input" placeholder="Enter city name..." autocomplete="off">
+                <button id="search-btn">Search</button>
+            </div>
+        </header>
+
+        <main class="weather-content hidden" id="weather-content">
+            <section class="current-weather">
+                <div class="main-info">
+                    <h2 id="location-name">London, GB</h2>
+                    <p id="weather-desc">Scatterd Clouds</p>
+                    <div class="temp-display">
+                        <img id="current-icon" src="" alt="Weather Icon">
+                        <span id="current-temp">21°C</span>
+                    </div>
+                </div>
+                
+                <div class="weather-details">
+                    <div class="detail-card">
+                        <span class="label">Humidity</span>
+                        <span class="value" id="humidity-val">64%</span>
+                    </div>
+                    <div class="detail-card">
+                        <span class="label">Wind Speed</span>
+                        <span class="value" id="wind-val">4.2 m/s</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="forecast-section">
+                <h3>5-Day Forecast</h3>
+                <div class="forecast-container" id="forecast-container">
+                    </div>
+            </section>
+        </main>
+        
+        <div id="error-message" class="error-msg hidden">City not found. Try again.</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
