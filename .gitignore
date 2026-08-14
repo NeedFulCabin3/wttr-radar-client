@@ -1,0 +1,13 @@
+# Editor / OS Noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local Logs
+*.log
+npm-debug.log*
+
+# Staging / Temporary
+*.tmp
+*.bak
