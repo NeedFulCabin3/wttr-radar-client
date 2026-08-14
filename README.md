@@ -1,4 +1,4 @@
-# Wttr Radar Client
+# WTTR Radar Client
 
 A client-side dashboard that turns raw weather data into clear forecast panels. It consumes `wttr.in` endpoints, maps text descriptions to icon sets, and presents conditions without complex setups or build tooling.
 
